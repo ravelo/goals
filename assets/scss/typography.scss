@@ -1,0 +1,54 @@
+.section-header {
+	margin-bottom: $spacing-unit;
+}
+
+.display-text {
+	font-family: $serif;
+	font-size: $font-size-large;
+	font-size: 2.5rem;
+	line-height: 1.1;
+	padding-right: 5%;
+	color: $accent-color;
+	font-weight: 300;
+
+	@include breakpoint(med-screen) {
+		font-size: 1.75rem;
+		padding-right: 0;
+	}
+
+}
+
+h1.display-text {
+	color: $accent-color-dark;
+	color:$primary-darkest;
+	color:$neutral-lightest;
+
+	&:after {
+        content: "\2014";
+        white-space: nowrap;
+    }
+}
+
+a {
+	text-decoration: none;
+	color: $accent-color-dark;
+	transition: all 400ms ease;
+
+	&:hover {
+		color: $primary-med;
+	}
+}
+
+h4, %h4 {
+	font-size: $font-size-smaller;
+	color:$accent-color-dark;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.site-title {
+	font-size: $font-size-small;
+	font-weight: $font-weight-regular;
+	color: $primary-darkest;
+	font-family: $serif;
+}

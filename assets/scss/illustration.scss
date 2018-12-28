@@ -1,0 +1,139 @@
+@keyframes popup {
+  0% { transform:translateX(0); }
+  50% { transform:translateX(-3px); }
+  100% { transform:translateX(0); }
+}
+
+@keyframes rotateRays {
+  0% { transform:rotate(0deg); }
+  40% { transform:rotate(95deg); }
+  50% { transform:rotate(90deg); }
+  90% { transform:rotate(185deg); }
+  100% { transform:rotate(180deg); }
+}
+
+
+// ------
+
+      .cls-10, .cls-14, .cls-18, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-14, .cls-18, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke-linecap: round;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-10, .cls-14, .cls-15, .cls-18, .cls-3 {
+        stroke-width: 3px;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        stroke-width: 2px;
+      }
+
+      .cls-5 {
+        stroke-dasharray: 6.23 5.19;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 1.04 4.15 6.23 5.19;
+      }
+
+      .cls-7 {
+        stroke-dasharray: 1.99 3.98;
+      }
+
+      .cls-8 {
+        stroke-dasharray: 9.96 3.98 1.99 3.98;
+      }
+
+      .cls-10, .cls-14, .cls-15, .cls-18 {
+        stroke-linejoin: round;
+      }
+
+//-----
+
+$illo-line-color: $primary-darkest;
+$illo-bg-color: $bg-right;
+
+
+#girl-reading {
+  margin: auto;
+  margin-bottom: $spacing-unit/2;
+  display: block;
+  width: 35%;
+}
+
+.book-cover {
+  .obj-fill { fill: $illo-bg-color; }
+  .outline { fill: $illo-line-color; }
+}
+
+.book-page {
+  .obj-fill { fill: $illo-bg-color;}
+  .outline { fill: $illo-line-color; }
+}
+
+.book-spine {
+  stroke: $illo-line-color;
+}
+
+.hair {
+  fill: $primary-med;
+  fill: $illo-line-color;
+  stroke: $illo-line-color;
+}
+
+.nose {
+  stroke: $illo-line-color;
+}
+
+.eyes {
+  fill: $illo-line-color;
+  transform: translateX(0);
+  animation: popup 3s 0s ease-out infinite;
+}
+
+.eyes-bg {
+  .obj-fill { fill: $illo-bg-color}
+  .outline { fill: $illo-line-color; }  
+}
+
+.face-bg {
+  fill: $illo-bg-color;
+}
+
+.bg-rect {
+  .obj-fill { fill: $illo-bg-color; }
+  .outline { fill: $illo-line-color;}
+  .stripes { 
+        stroke: $illo-line-color;
+  }
+}
+
+.bg-arc {
+  .obj-fill { fill: $illo-bg-color; }
+  .outline { fill: $illo-line-color; }
+}
+
+.rays {
+  transform:rotate(0deg);
+  transform-origin:57.07px 57.07px;
+  animation:rotateRays 16s 0s ease-in-out infinite;
+}
+
+.rays line { 
+  stroke: $accent-color;
+}
+
+.rays .ray-2 line {
+  stroke: $accent-color-dark;
+}
+
+.rays .ray-3 line {
+  stroke: $accent-color-dark;
+}

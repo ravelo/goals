@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*
+        This font software is the property of Commercial Type.
+
+        You may not modify the font software, use it on another website, or install it on a computer.
+
+        License information is available at http://commercialtype.com/eula
+        For more information please visit Commercial Type at http://commercialtype.com or email us at info[at]commercialtype.com
+
+        Copyright (C) 2016 Schwartzco Inc.
+        License: 1605-IKQGQP     
+*/
+
+@font-face {
+  font-family: 'Canela Web';
+  src: url("fonts/Canela-Light-Web.eot");
+  src: url("fonts/Canela-Light-Web.eot?#iefix") format("embedded-opentype"), url("fonts/Canela-Light-Web.woff2") format("woff2"), url("fonts/Canela-Light-Web.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal; }
+.Canela-Light-Web {
+  font-family: 'Canela Web';
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal; }
+
+// -------------------------------------------
+
+
+$sans-serif: 'Work Sans', sans-serif;
+$serif: 'Canela Web', Georgia, 'Times New Roman', Times, serif;
+
+
+$base-line-height: 1.35;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-bold: 600;
+
+$font-size-large: 2rem;
+$font-size-med: 1.4rem;
+$font-size-small: 1.15rem;
+$font-size-smaller: 0.8rem;
+
+$spacing-unit: 2.5rem;
+$small-screen-margin: $spacing-unit * 0.75; // for mobile margins
+
+$transition: all 300ms ease;
+
+
+
+
+$neutral-lightest: #F2F5F8;
+//$neutral-lightest: #FBF9F9;
+$neutral-light: #DCE7EF;
+$neutral-darkest: #0E033A;
+
+$accent-light: #FF8C80;
+$accent-med: #FE6058;
+$accent-dark: #EC4149;
+
+//$highlight-color: #FFD5C2;
+//$highlight-color: #FC866E;
+
+$primary-med: #6A78F0;
+$primary-dark: #3A139D;
+$primary-darkest: #1A0054;
+
+$accent-color: #F2BCCF;
+$accent-color-dark: #FF5249;
+
+//$brand-color: #1A237E;
+$brand-color: $primary-dark;
+
+$bg-right: $neutral-lightest;
+$bg-left: $primary-darkest;
+//$bg-left:$accent-color;
+
+$goal-unit: 50px;
+$goal-width-total: $goal-unit * 7;
+
+
+// ----------------------------------------------
+
+
+%clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after { clear: both; }
+} // clearfix
+
+
+.visiblyhidden,
+%visiblyhidden {
+    position: absolute;
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height: 1px;
+    width: 1px; 
+    margin: -1px; 
+    padding: 0;
+    border: 0; 
+}
+
+.visibilityReset,
+%visibilityReset {
+    position: relative;
+    overflow: visible; 
+    clip: auto; 
+    height: auto;
+    width: auto; 
+    margin: 0; 
+    padding: 0;
+    border: 0; 
+}
+
+// -----------------------------------------------
+
+
+@mixin breakpoint($point) {
+
+    @if $point == large-screen {
+          @media (min-width: 65.05em) { @content ; }
+    }
+
+    @if $point == med-screen {
+          @media (max-width: 65em) { @content ; }
+    }
+
+    @else if $point == small-screen {
+          @media (max-width: 46em) { @content ; } 
+    }
+
+    @else if $point == smallest-screen {
+          @media (max-width: 34em) { @content ; } 
+    }
+
+} // @include breakpoint
+
